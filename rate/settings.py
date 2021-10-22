@@ -37,6 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rateapp.apps.RateappConfig',
+    'pyuploadcare.dj',
+    'bootstrap4',
+    'tinymce',
 ]
 
 MIDDLEWARE = [
