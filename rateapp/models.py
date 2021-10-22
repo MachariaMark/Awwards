@@ -42,3 +42,14 @@ class Project(models.Model):
   def get_profile_projects(cls, profile):
     projects = Project.objects.filter(profile__pk = profile)
     return projects
+
+class Review(models.Model):
+  design = models.IntegerField(default=0)
+  usability = models.IntegerField(default=0)
+  content = models.IntegerField(default=0)
+  average = models.IntegerField(default=0)
+  project = models.ForeignKey(Project, on_delete=models.CASCADE)
+  user = models.ForeignKey(User, on_delete=models.CASCADE)
+
+  def __str__(self):
+    return self.project
