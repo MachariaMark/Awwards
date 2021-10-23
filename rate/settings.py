@@ -72,19 +72,24 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'rate.wsgi.application'
+UPLOADCARE = {
+    'pub_key': 'ce3c95e55a21c0ffc794',
+    'secret': 'e6a7363c88217fe448da',
+}
 
+WSGI_APPLICATION = 'rate.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'rateapp',
+        'USER': 'marknuchirimacharia',
+        'PASSWORD':'1offmark',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
